@@ -1,0 +1,118 @@
+/* Roboto - local, offline-capable */
+@font-face {
+  font-family: "Roboto";
+  src: url("./roboto/Roboto-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./roboto/Roboto-LightItalic.ttf") format("ttf");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./roboto/Roboto-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./roboto/Roboto-BoldItalic.ttf") format("ttf");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Mobile default: stacked full width */
+.outer-col,
+.center-col {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* Desktop breakpoint: apply 80/20 split */
+@media (min-width: 768px) {
+  .outer-col {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .center-col {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  margin-top: 50px;
+}
+
+button {
+  background-color: #f7da21;
+  color: black;
+  border-color:orange;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  overflow: auto;
+}
+
+.modal-overlay.is-open {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.modal {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  border-radius: 0.6rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.modal-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body p {
+  margin-bottom: 0.75rem;
+}
+
+/* Optional: make the close button a bit larger */
+#defCloseBtn {
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0 0.5rem;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}

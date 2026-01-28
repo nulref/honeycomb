@@ -1,4 +1,4 @@
-const CACHE_NAME = "honeycomb-v1.6";
+const CACHE_NAME = "honeycomb-v1.7";
 
 const ASSETS = [
   "./",
